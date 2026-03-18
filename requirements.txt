@@ -1,0 +1,6 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+torch==2.6.0
+transformers==4.35.0
+Pillow==10.1.0
+python-multipart==0.0.6   # 用于处理文件上传
