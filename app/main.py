@@ -14,11 +14,11 @@ async def create_embedding(file: UploadFile = File(...)):
     接收上传的图片文件，返回 embedding 向量
     """
     # 检查文件类型（可选，根据需求放宽）
-    if not file.content_type.startswith("image/"):
-        raise HTTPException(status_code=400, detail="File must be an image")
+    # if not file.content_type.startswith("image/"):
+    #     raise HTTPException(status_code=400, detail="File must be an image")
 
     try:
-        # 读取图片字节
+        # 读取文件字节
         contents = await file.read()
         if not contents:
             raise HTTPException(status_code=400, detail="Empty file")
